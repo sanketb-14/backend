@@ -38,7 +38,7 @@ const requestHandler = ((req, res) => {
         })
         req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString();
-            const message = parsedBody.split('=')[1];
+            // const message = parsedBody.split('=')[1];
             fs.writeFile(filePath, message, (err) => {
                 if (err) {
                     console.error(err);
